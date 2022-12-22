@@ -2,9 +2,33 @@
     border-style: solid;
     border-width: 2px;
     border-color: black;
-    margin: 5px;
     min-height: 25px;
     min-width: 25px;
+    user-select: none;
+}
+
+.gridbox-none {
+    background-color: white;
+}
+
+.gridbox-one {
+    background-color: lightgray;
+}
+
+.gridbox-two {
+    background-color: darkgray;
+}
+
+.gridbox-three {
+    background-color: gray;
+}
+
+.gridbox-four {
+    background-color: rgb(36, 36, 36);
+}
+
+.gridbox-five {
+    background-color: black;
 }
 
 .row {
