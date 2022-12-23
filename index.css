@@ -24,13 +24,27 @@
 }
 
 .gridbox-four {
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(67, 67, 67);
 }
 
 .gridbox-five {
     background-color: black;
 }
 
+.gridbox-color {
+    background-color: white;
+}
+
 .row {
     display: flex;
+}
+
+.ui {
+    display: flex;
+}
+
+.ui > .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

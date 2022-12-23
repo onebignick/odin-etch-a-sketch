@@ -36,8 +36,34 @@ function createGrid (size) {
     }
 }
 
+function clear() {
+    let parent = document.getElementById('grid-container');
+    for (const child of parent.children) {
+        for (const box of child.children) {
+            box.removeAttribute('class');
+            box.classList.add('gridbox');
+            box.classList.add('gridbox-none');
+        }
+    }
+}
+
+function resize() {
+    let input = prompt('Enter size of grid here: ');
+    let box = document.getElementById('grid-container');
+    console.log(box);
+    while (box.firstChild) {
+        box.removeChild(box.firstChild);
+    }
+    createGrid(input)
+}
+
 window.addEventListener('DOMContentLoaded', function() {
     createGrid(16);
+    let clear_btn = document.getElementById('clear-btn');
+    let size_btn = document.getElementById('size-btn');
+
+    clear_btn.onclick = clear;
+    size_btn.onclick = resize;
 });
 
 let mouseDown = false;
